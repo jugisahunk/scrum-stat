@@ -53,7 +53,7 @@ describe("Team CRUD", function(){
 			expect(newTeam.members[2]).toEqual({name: "Lol McCatly"});
 			expect(newTeam.members[3]).toEqual({name: "Bat McFlapsalot"});
 		});
-		
+
 		it("should handle a 'null' name given explicitly", function(){
 			testee.addMember(newTeam, "Foo McBarr");
 			testee.addMember(newTeam, null);

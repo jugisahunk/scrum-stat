@@ -8,5 +8,5 @@ testWatcher.on('change', function(event) {
 
 gulp.task('default', function(){
   return gulp.src('spec/*.js')
-    .pipe(jasmine({verbose:true, includeStackTrace: true}));  
+    .pipe(jasmine({verbose:true, includeStackTrace: true}));
 });
