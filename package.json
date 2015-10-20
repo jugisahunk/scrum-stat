@@ -1,0 +1,35 @@
+{
+  "name": "scrum-stat",
+  "version": "1.0.0",
+  "description": "A tool for generating sample Sprint data for Scrum Teams for what-if analysis",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jasmine": "^2.1.0",
+    "gulp-jshint": "^1.11.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jugisahunk/scrum-stat.git"
+  },
+  "keywords": [
+    "Scrum",
+    "Statistics",
+    "What-If",
+    "Sample",
+    "Data",
+    "Analysis",
+    "Projection",
+    "Velocity"
+  ],
+  "author": "Jason Knight",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jugisahunk/scrum-stat/issues"
+  },
+  "homepage": "https://github.com/jugisahunk/scrum-stat#readme"
+}
