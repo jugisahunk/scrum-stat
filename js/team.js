@@ -1,4 +1,4 @@
-exports.create = function(teamName){
+module.exports.create = function(teamName){
 	var newTeam = {
 		name : null,
 		members : []
@@ -10,6 +10,6 @@ exports.create = function(teamName){
 	return newTeam;;
 };
 
-exports.addMember = function(team, teamMemberName){
+module.exports.addMember = function(team, teamMemberName){
 	team.members.push({ name : teamMemberName});
 };
