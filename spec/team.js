@@ -67,5 +67,9 @@ describe("Team CRUD", function(){
 			expect(newTeam.members[2]).toEqual({name: "Lol McCatly"});
 			expect(newTeam.members[3]).toEqual({name: "Bat McFlapsalot"});
 		});
+
+		it("should do new stuff", function(){
+
+		});
 	});
 });
