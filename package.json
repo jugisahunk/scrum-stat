@@ -6,11 +6,14 @@
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-jasmine": "^2.1.0",
-    "gulp-jshint": "^1.11.2"
+    "gulp-jshint": "^1.11.2",
+    "ejs": "2.3.3",
+    "express": "4.13.3"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
