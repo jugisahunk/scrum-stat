@@ -1,15 +1,13 @@
-module.exports.create = function(teamName){
-	var newTeam = {
-		name : null,
-		members : []
-	};
+module.exports = Team;
 
-	if(teamName)
-		newTeam.name = teamName;
+var name;
+var members;
 
-	return newTeam;;
-};
+function Team(teamName, teamMembers){
+	this.name = teamName;
+	this.members = teamMembers || [];
+}
 
-module.exports.addMember = function(team, teamMemberName){
-	team.members.push({ name : teamMemberName});
-};
+Team.prototype.addMember = function (teamMemberName){
+	this.members.push({ name : teamMemberName});
+}

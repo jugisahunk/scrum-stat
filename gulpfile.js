@@ -7,7 +7,7 @@ gulp.task('watch', function(){
 
 gulp.task('test', function(){
   return gulp.src('spec/*.js')
-    .pipe(jasmine({verbose:true, includeStackTrace: true}));
+    .pipe(jasmine({verbose:true, includeStackTrace: false}));
 });
 
 gulp.task('default', ['test']);
