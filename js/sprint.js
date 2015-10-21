@@ -3,12 +3,16 @@ module.exports = Sprint;
 var Team = require('../js/team.js');
 
 function Sprint(sprintName, sprintTeam){
-	this.name = sprintName;
+	this._name = sprintName;
 	this.team = sprintTeam || new Team();;
-	this.isComplete = false;
+	this._isComplete = false;
 }
 
-Sprint.prototype.complete = function (){
-	this.isComplete = true;
+Sprint.prototype.completeSprint = function (){
+	this._isComplete = true;
 	this.velocity = 32;
 }
+
+Sprint.prototype.isComplete = function(){
+	return this._isComplete;
+};

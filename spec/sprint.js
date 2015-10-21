@@ -16,20 +16,27 @@ describe("Sprint CRUD", function(){
 			expect(newSprint.team).not.toBe(undefined);
 		});
 
-		it("should be able to complete a sprint", function(){
-			expect(newSprint.isComplete).toBeFalsy();
+		it("should be able to.completeSprint a sprint", function(){
+			expect(newSprint.isComplete()).toBeFalsy();
 
-			newSprint.complete();
+			newSprint.completeSprint();
 
-			expect(newSprint.isComplete).toBeTruthy();
+			expect(newSprint.isComplete()).toBeTruthy();
 		});
-
-		it("should produce a numeric sprint velocity only if complete", function(){
-			expect(newSprint.velocity).toEqual(undefined);
-			newSprint.complete();
-			expect(newSprint.velocity).toEqual(32);
-		});
-
 	});
 
+	describe("Sprint Velocity", function(){
+		var newTeam, newSprint;
+
+		beforeEach(function(){
+			newTeam = new Team('testname');
+			newSprint = new Sprint(newTeam);
+		});
+
+		it("should produce a numeric sprint velocity only if.completeSprint", function(){
+			expect(newSprint.velocity).toEqual(undefined);
+			newSprint.completeSprint();
+			expect(newSprint.velocity).toEqual(jasmine.any(Number));
+		});
+	});
 });
