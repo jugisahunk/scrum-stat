@@ -1,2 +1,7 @@
+# Goal
+To develop a tool for generating sample Sprint data for Scrum Teams.  
+This should help with what-if analysis checking.
+
+# How to get set up
 npm install gulp --save-dev
 npm install gulp-jshint --save-dev
