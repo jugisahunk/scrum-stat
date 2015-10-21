@@ -33,7 +33,7 @@ describe("Sprint CRUD", function(){
 			newSprint = new Sprint(newTeam);
 		});
 
-		it("should produce a numeric sprint velocity only if.completeSprint", function(){
+		it("should produce a numeric sprint velocity only if complete", function(){
 			expect(newSprint.velocity).toEqual(undefined);
 			newSprint.completeSprint();
 			expect(newSprint.velocity).toEqual(jasmine.any(Number));
