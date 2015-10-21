@@ -1,13 +1,14 @@
 module.exports = Team;
 
-var name;
-var members;
-
 function Team(teamName, teamMembers){
-	this.name = teamName;
-	this.members = teamMembers || [];
+	this._name = teamName;
+	this._members = teamMembers || [];
 }
 
 Team.prototype.addMember = function (teamMemberName){
-	this.members.push({ name : teamMemberName});
+	this._members.push({ name : teamMemberName});
+}
+
+Team.prototype.name = function (){
+	return this._name;
 }

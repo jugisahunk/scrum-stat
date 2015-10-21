@@ -7,19 +7,19 @@ describe("Team CRUD", function(){
 		it("should create a team with zero members", function(){
 			var newTeam = new Team();
 
-			expect(newTeam.members.length).toEqual(0);
+			expect(newTeam._members.length).toEqual(0);
 		});
 
 		it("should create a new team with a given name", function(){
 			var newTeamName = "Team Foo";
 			var newTeam = new Team(newTeamName);
 
-			expect(newTeam.name).toEqual(newTeamName);
+			expect(newTeam.name()).toEqual(newTeamName);
 		});
 
 		it("should return 'undefined' if no name is given", function(){
 			var newTeam = new Team();
-			expect(newTeam.name).toBe(undefined);
+			expect(newTeam.name()).toBe(undefined);
 		});
 	});
 
@@ -28,8 +28,8 @@ describe("Team CRUD", function(){
 			var newTeam = new Team();
 			newTeam.addMember("Foo McBarr");
 
-			expect(newTeam.members.length).toEqual(1);
-			expect(newTeam.members[0]).toEqual({
+			expect(newTeam._members.length).toEqual(1);
+			expect(newTeam._members[0]).toEqual({
 				name: "Foo McBarr"
 			});
 		});
@@ -42,12 +42,12 @@ describe("Team CRUD", function(){
 			newTeam.addMember("Lol McCatly");
 			newTeam.addMember("Bat McFlapsalot");
 
-			expect(newTeam.members.length).toEqual(4);
+			expect(newTeam._members.length).toEqual(4);
 
-			expect(newTeam.members[0]).toEqual({name: "Foo McBarr"});
-			expect(newTeam.members[1]).toEqual({name: "Rand McNalley"});
-			expect(newTeam.members[2]).toEqual({name: "Lol McCatly"});
-			expect(newTeam.members[3]).toEqual({name: "Bat McFlapsalot"});
+			expect(newTeam._members[0]).toEqual({name: "Foo McBarr"});
+			expect(newTeam._members[1]).toEqual({name: "Rand McNalley"});
+			expect(newTeam._members[2]).toEqual({name: "Lol McCatly"});
+			expect(newTeam._members[3]).toEqual({name: "Bat McFlapsalot"});
 		});
 
 		it("should handle a no name given explicitly", function(){
@@ -57,12 +57,12 @@ describe("Team CRUD", function(){
 			newTeam.addMember("Lol McCatly");
 			newTeam.addMember("Bat McFlapsalot");
 
-			expect(newTeam.members.length).toEqual(4);
+			expect(newTeam._members.length).toEqual(4);
 
-			expect(newTeam.members[0]).toEqual({name: "Foo McBarr"});
-			expect(newTeam.members[1]).toEqual({name: undefined});
-			expect(newTeam.members[2]).toEqual({name: "Lol McCatly"});
-			expect(newTeam.members[3]).toEqual({name: "Bat McFlapsalot"});
+			expect(newTeam._members[0]).toEqual({name: "Foo McBarr"});
+			expect(newTeam._members[1]).toEqual({name: undefined});
+			expect(newTeam._members[2]).toEqual({name: "Lol McCatly"});
+			expect(newTeam._members[3]).toEqual({name: "Bat McFlapsalot"});
 		});
 	});
 });

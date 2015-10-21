@@ -16,7 +16,7 @@ describe("Sprint CRUD", function(){
 			expect(newSprint.team).not.toBe(undefined);
 		});
 
-		it("should be able to.completeSprint a sprint", function(){
+		it("should be able to complete a sprint", function(){
 			expect(newSprint.isComplete()).toBeFalsy();
 
 			newSprint.completeSprint();
